@@ -30,6 +30,14 @@ function postDateContent() {
         }else if (blueCheckBox.checked){
             postContent.style.color = "Blue";
         }
+        const italicCheck = document.getElementById("italic");
+        const boldCheck = document.getElementById("bold");
+        if (italicCheck.checked){
+            postContent.style.fontStyle = "italic";
+        }
+        if (boldCheck.checked){
+            postContent.style.fontWeight= "bold";
+        }
         individualPost.appendChild(postContent);
         postDiv.appendChild(individualPost);
     }
