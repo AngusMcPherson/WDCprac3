@@ -11,20 +11,29 @@ blueDiv.addEventListener('mouseenter', function (event) {
 var postButton = document.getElementById("poster");
 postButton.addEventListener('click', postDateContent);
 function postDateContent() {
-    console.log("im being called now");
-    const content = document.getElementById('textInput').value;
-    const individualPost = document.createElement("div");
-    const dateOfPost = document.createElement("p");
-    dateOfPost.className = 'post-time';
-    dateOfPost.innerText = new Date();
-    dateOfPost.style.color = "grey";
-    dateOfPost.style.fontWeight = "bold";
-    individualPost.appendChild(dateOfPost);
-    const postContent = document.createElement("p");
-    postContent.className = 'post-content';
-    postContent.innerText = content;
-    individualPost.appendChild(postContent);
-    postDiv.appendChild(individualPost)
+    for (let i = 0; i < document.getElementById("number").value; i++) {
+        const content = document.getElementById('textInput').value;
+        const individualPost = document.createElement("div");
+        const dateOfPost = document.createElement("p");
+        dateOfPost.className = 'post-time';
+        dateOfPost.innerText = new Date();
+        dateOfPost.style.color = "grey";
+        dateOfPost.style.fontWeight = "bold";
+        individualPost.appendChild(dateOfPost);
+        const postContent = document.createElement("p");
+        postContent.className = 'post-content';
+        postContent.innerText = content;
+        const redCheckBox = document.getElementById("red");
+        const blueCheckBox = document.getElementById("blue");
+        if (redCheckBox.checked){
+            postContent.style.color = "Red";
+        }else if (blueCheckBox.checked){
+            postContent.style.color = "Blue";
+        };
+        individualPost.appendChild(postContent);
+        postDiv.appendChild(individualPost);
+    };
+    
 }
 
 const mainDiv = document.getElementById("main");
@@ -41,7 +50,3 @@ function bringMain() {
     mainDiv.style.display = "block";
     menuDiv.style.display = "none";
 }
-
-
-
-
