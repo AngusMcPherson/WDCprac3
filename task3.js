@@ -29,7 +29,7 @@ function postDateContent() {
             postContent.style.color = "Red";
         }else if (blueCheckBox.checked){
             postContent.style.color = "Blue";
-        };
+        }
         individualPost.appendChild(postContent);
         postDiv.appendChild(individualPost);
     };
@@ -44,6 +44,7 @@ function bringMenu() {
     mainDiv.style.display = "none";
     menuDiv.style.display = "block";
 }
+
 var backButton = document.getElementById("backButton");
 backButton.addEventListener('click', bringMain);
 function bringMain() {
