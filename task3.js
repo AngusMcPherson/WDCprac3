@@ -51,3 +51,9 @@ function bringMain() {
     mainDiv.style.display = "block";
     menuDiv.style.display = "none";
 }
+
+const bC = document.getElementById("bodyColor");
+bC.addEventListener("blur", updateColor);
+function updateColor() {
+    document.body.style.backgroundColor = document.getElementById("bodyColor").value;
+}
