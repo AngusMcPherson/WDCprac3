@@ -65,3 +65,16 @@ bC.addEventListener("blur", updateColor);
 function updateColor() {
     document.body.style.backgroundColor = document.getElementById("bodyColor").value;
 }
+
+const slider = document.getElementById("range");
+slider.addEventListener("input", updatePosts);
+function updatePosts(){
+    for (let i = 0; i < document.getElementById("range").value; i++) {
+        const nthPost = document.getElementById('posts').children[i];
+        nthPost.style.display = "block";
+    }
+    for (let i = document.getElementById("range").value; i < 10; i++) {
+        const nthPost = document.getElementById('posts').children[i];
+        nthPost.style.display = "none";
+    }
+}
