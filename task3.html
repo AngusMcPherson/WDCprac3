@@ -14,16 +14,16 @@
         <div id="main" class="container">
             <button type="button" class="right">MENU</button>
             <h1>Part 3 - Javascript Playground</h1>
-            <div id="mcount" onmouseover="onMouseOver()"></div>
+            <div id="mcount"></div>
             <div id="posts"></div>
             <hr />
-            <textarea rows="4" cols="60">Type your text here...</textarea>
+            <textarea id="textInput" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
                 <input type="number" name="quantity" value="1" /><br />
                 <input type="radio" name="color" value="blue" /> Blue<br />
                 <input type="radio" name="color" value="red" /> Red<br />
-                <button type="button">Post</button>
+                <button id="poster" type="button">Post</button>
             </div>
             <div class="controls left"> 
                 <input type="range" name="visible" min="1" max="10" value="10"/><br />
