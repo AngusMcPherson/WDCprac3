@@ -32,7 +32,7 @@ function postDateContent() {
         }
         individualPost.appendChild(postContent);
         postDiv.appendChild(individualPost);
-    };
+    }
     
 }
 
